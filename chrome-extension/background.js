@@ -15,7 +15,7 @@ chrome.contextMenus.create({
 				tab = tabs[0],
 				url = tab.url.replace(/#.*$/, ''),
 				text = event.selectionText,
-				hash = '##' + encodeURI(text.trim()).replace(/\+/g, '%2B').replace(/(%20)+/g, '+');
+				hash = '#' + encodeURI(text.trim()).replace(/\+/g, '%2B');
 
 				chrome.tabs.update(tab.id, {
 					url: url + hash
