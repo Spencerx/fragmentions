@@ -41,7 +41,7 @@ In the following example, clicking **TL;DR** would jump to the `<strong>` elemen
 </article>
 ```
 
-For another example, a [http://www.kevinmarks.com/fragmentions.html#the%20right%20ones%20in%20the%20right%20order](`#the%20right%20ones%20in%20the%20right%20order`) fragmention would jump to the paragraph in the `blockquote`:
+For another example, a <a href="http://www.kevinmarks.com/fragmentions.html#the%20right%20ones%20in%20the%20right%20order"><code>#the%20right%20ones%20in%20the%20right%20order</code></a> fragmention would jump to the paragraph in the `blockquote`:
 
 ```html
 <p>If I want to point you to Tom Stoppard's quote from The Real Thing:
