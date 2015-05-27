@@ -1,9 +1,9 @@
 # Fragmentions
 
-Fragmentions are anchors to individual words or phrases in a document.
+Fragmentions are anchors to phrases in a document.
 
 ```html
-<a href="##this+specific+text+">Find this specific text</a>
+<a href="#this%20specific%20text">Find this specific text</a>
 ```
 
 - [Google Chrome Extension](https://chrome.google.com/webstore/detail/fragmentions/pgajkeekgcmgglngchhmcmnkffnhihck)
@@ -13,14 +13,14 @@ Fragmentions are anchors to individual words or phrases in a document.
 
 ## Usage
 
-Fragmentions use **##** double-hash changes to match words or phrases in a document, jumping to their corresponding element. Matches are case sensitive and whitespace insensitive. Corresponding elements may be spans, paragraphs, headings, buttons, inputs, or any other container element.
+Fragmentions use **#** hash links to match words or phrases in a document, jumping to their corresponding element. Matches are case sensitive and whitespace insensitive. Corresponding elements may be spans, paragraphs, headings, buttons, inputs, or any other container element.
 
 In the following example, clicking **TL;DR** would jump to the `<strong>` element containing **Life, Liberty and the pursuit of Happiness**.
 
 ```html
 <article>
 	<p>
-		<a href="##pursuit">TL;DR</a>
+		<a href="#the%20pursuit">TL;DR</a>
 	</p>
 
 	<p>
@@ -41,15 +41,18 @@ In the following example, clicking **TL;DR** would jump to the `<strong>` elemen
 </article>
 ```
 
-In another example, a `##★★★★☆` unicode fragmention would jump to the 4/5 star rating.
+For another example, a [http://www.kevinmarks.com/fragmentions.html#the%20right%20ones%20in%20the%20right%20order](`#the%20right%20ones%20in%20the%20right%20order`) fragmention would jump to the paragraph in the `blockquote`:
 
 ```html
-<abbr class="rating" title="4" tabindex="0">★★★★☆</abbr>
+<p>If I want to point you to Tom Stoppard's quote from The Real Thing:
+
+<blockquote><p>I don’t think writers are sacred, but words are. They deserve respect. If you get the right ones in the right order, you can nudge the world a little or make a poem which children will speak for you when you’re dead.</p></blockquote> 
+
 ```
 
 Additionally, **location.fragmention** returns a decoded fragmention, in the same manner that **location.hash** returns a decoded fragment.
 
-While elements should not use IDs leading with a **#** single-hash, **##** double-hash fragments with a matching ID (e.g. **##term** and **id="#term"**) will not be interpretted as fragmentions.
+While elements should not use IDs leading with a **#** single-hash, **##** double-hash fragments with a matching ID (e.g. **##term** and **id="#term"**) will not be interpreted as fragmentions.
 
 While fragmentions should lead with a **##** double-hash, single-hash fragments with no matching ID (e.g. **#and+justice+for+all**) will be interpretted as fragmentions.
 
