@@ -46,7 +46,10 @@ For another example, a <a href="http://www.kevinmarks.com/fragmentions.html#the%
 ```html
 <p>If I want to point you to Tom Stoppard's quote from The Real Thing:
 
-<blockquote><p>I don’t think writers are sacred, but words are. They deserve respect. If you get the right ones in the right order, you can nudge the world a little or make a poem which children will speak for you when you’re dead.</p></blockquote> 
+<blockquote><p>I don’t think writers are sacred, but words are. 
+They deserve respect. If you get the right ones in the right order, 
+you can nudge the world a little or make a poem which children will 
+speak for you when you’re dead.</p></blockquote> 
 
 ```
 
