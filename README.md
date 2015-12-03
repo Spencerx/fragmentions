@@ -57,7 +57,7 @@ Additionally, **location.fragmention** returns a decoded fragmention, in the sam
 
 While elements should not use IDs leading with a **#** single-hash, **##** double-hash fragments with a matching ID (e.g. **##term** and **id="#term"**) will not be interpreted as fragmentions.
 
-While fragmentions should lead with a **##** double-hash, single-hash fragments with no matching ID (e.g. **#and+justice+for+all**) will be interpretted as fragmentions.
+While fragmentions should start with a **#**  single-hash, double-hash fragments with no matching ID (e.g. **##and+justice+for+all**) will be interpreted as fragmentions for backwards compatibility.
 
 ## JavaScript polyfill
 
@@ -82,6 +82,8 @@ While most find the idea of fragmentions delightful, there are differing ideas o
 ### Double-hashes in the wild
 
 The current [URL specification](http://url.spec.whatwg.org/#url-code-points) *does not allow* fragments to contain **#** hashes, so links with double-hashes like `<a href="##foo">` will fail current validation. These specifications can be updated, and the *invaliding* weakness of **##** may be conversely interpreted as a *non-conflicting* quality.
+
+Because of this, we have switched to a single hash fragmention by default.
 
 Browsers, on the other hand, *do allow* hashes, so invalid links in the wild like `<a href="##foo">` might generate conflict. As a result, fragmentions will always defer to fragments with matching IDs.
 
